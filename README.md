@@ -6,5 +6,5 @@ Therefore, don't hesitate to submit any issues you may encounter, ask questions 
 
 # Useful Links
 * [Open an issue or feature request](https://github.com/2-alchemists/krossboard/issues)
-* [Documentation](https://krossboard.app/docs)
+* [Documentation](https://krossboard.app/)
 * [Releases information](https://krossboard.app/releases)
