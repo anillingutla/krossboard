@@ -1,5 +1,8 @@
 # <a href='https://krossboard.app/'><img src='https://github.com/2-alchemists/krossboard/blob/master/assets/krossboard-logo.png' alt='Krossboard logo'></a>
-                                 
+> Kubernetes Usage Analytics for Cost and Capacity Management
+
+[![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/2alchemists/krossboard)
+
 ## Overview
 This repository is offered for tracking features and issues with [Krossboard](https://krossboard.app/). This repository is activily monitored by the Krossboard product team. 
 
