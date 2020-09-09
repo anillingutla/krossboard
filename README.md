@@ -1,10 +1,10 @@
 # <a href='https://krossboard.app/'><img src='https://github.com/2-alchemists/krossboard/blob/master/assets/krossboard-logo.png' alt='Krossboard logo'></a>
-> Kubernetes Usage Analytics for Cost and Capacity Management
+> [Krossboard](https://krossboard.app/) provides a centralized cross-cluster resource usage analytics for managed Kubernetes. It's currently supported on Amazon EKS, Microsoft AKS and Google GKE.
 
 [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/2alchemists/krossboard)
 
-## Overview
-This repository is offered for tracking features and issues with [Krossboard](https://krossboard.app/). This repository is activily monitored by the Krossboard product team. 
+## About this repository
+This repository is offered for tracking features and issues. The Krossboard product team actively monitors the repo for new requests. 
 
 We encourage feedback and always make our best to handle any issues as fast as possible. 
 Therefore, don't hesitate to submit any issues you may encounter, ask questions if applicable, or make feature requests.
