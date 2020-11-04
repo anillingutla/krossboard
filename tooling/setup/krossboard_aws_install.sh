@@ -27,7 +27,7 @@ if ! command -v kubectl &> /dev/null; then
 fi
 
 echo "==> Checking deployment parameters..."
-curl -so /tmp/krossboard_default.sh https://krossboard.app/artifacts/setup/krossboard_default.sh && \
+curl -so /tmp/krossboard_default.sh https://raw.githubusercontent.com/2-alchemists/krossboard/master/tooling/setup/krossboard_default.sh && \
   source /tmp/krossboard_default.sh
 
 if [ -z "$KB_AWS_REGION" ]; then
@@ -125,7 +125,7 @@ until [ "$retry" -ge 15 ]; do
 done
 
 echo "==> Configuring required RBAC permissions to retrieve EKS metrics..."
-curl -so krossboard_aws_configure_new_clusters.sh https://krossboard.app/artifacts/setup/krossboard_aws_configure_new_clusters.sh && \
+curl -so krossboard_aws_configure_new_clusters.sh https://raw.githubusercontent.com/2-alchemists/krossboard/master/tooling/setup/krossboard_aws_configure_new_clusters.sh && \
   source ./krossboard_aws_configure_new_clusters.sh "$KB_ROLE_ARN" "$KB_AWS_REGION"
 
 echo "==> Tagging the instance..."

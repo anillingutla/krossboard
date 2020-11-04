@@ -21,7 +21,7 @@ if ! command -v kubectl &> /dev/null; then
 fi
 
 echo "==> Checking deployment parameters..."
-curl -so /tmp/krossboard_default.sh https://krossboard.app/artifacts/setup/krossboard_default.sh && \
+curl -so /tmp/krossboard_default.sh https://raw.githubusercontent.com/2-alchemists/krossboard/master/tooling/setup/krossboard_default.sh && \
   source /tmp/krossboard_default.sh
 
 if [ -z "$AZURE_GROUP" ]; then
