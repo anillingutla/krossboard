@@ -135,9 +135,10 @@ echo "==> Retrieving instance public IP..."
 KB_IP=$($AWS_CMD ec2 describe-instances --instance-ids $KB_INSTANCE_ID --query "Reservations[*].Instances[*].PublicIpAddress" --output=text)
 
 echo -e "\e[1m\e[32m=== Summary the Krossboard instance ==="
-echo -e "Instance Name => $KB_INSTANCE_NAME"
-echo -e "Instance ID => $KB_INSTANCE_ID"
+echo -e "Instance (Name, ID) => ($KB_INSTANCE_NAME, $KB_INSTANCE_ID)"
 echo -e "Region => $KB_AWS_REGION"
+echo -e "Role => $KB_ROLE_NAME"
+echo -e "Security Group => $KB_SG_NAME"
 echo -e "Key Pair => $KB_AWS_KEY_PAIR"
 echo -e "Krossboard UI => http://$KB_IP/"
 echo -e "\e[0m"

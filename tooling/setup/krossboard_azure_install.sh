@@ -78,7 +78,6 @@ az vm create -g $AZURE_GROUP \
   --location $KB_AZURE_LOCATION \
   --admin-username azureuser \
   --generate-ssh-keys
-  
 
 echo "==> Configure IAM permissions for the instance..."
 # restore the main session before continuing
@@ -116,7 +115,8 @@ echo $KB_IP
 
 echo -e "\e[1m\e[32m=== Summary the installation ==="
 echo -e "Instance Name => $KB_AZURE_VM_NAME"
-echo -e "Resource Group => $AZURE_GROUP"
 echo -e "Location => $KB_AZURE_LOCATION"
+echo -e "Resource Group => $AZURE_GROUP"
+echo -e "Network Security Group => $KB_NSG_FOUND"
 echo -e "Krossboard UI => http://$KB_IP/"
 echo -e "\e[0m"

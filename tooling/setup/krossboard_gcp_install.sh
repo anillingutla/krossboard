@@ -125,6 +125,9 @@ KB_IP=$($GCLOUD_CMD compute instances list --filter="name:$KB_INSTANCE_NAME" --f
 echo -e "\e[1m\e[32m=== Summary the Krossboard instance ==="
 echo -e "Instance Name => $KB_INSTANCE_NAME"
 echo -e "Project => ${GCP_PROJECT}"
+echo -e "Zone => $GCP_ZONE"
+echo -e "Firewall rule => $KB_FW_RULE"
+echo -e "Service account => $KB_SA_NAME"
 echo -e "Krossboard UI => http://$KB_IP/"
 echo -e "\e[0m"
 
