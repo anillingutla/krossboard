@@ -40,13 +40,7 @@ for cluster in $CURRENT_CLUSTERS; do
     METRIC_SERVER_FOUND=$(kubectl -nkube-system get deploy metrics-server || echo "NO_METRIC_SERVER")
     if [ "$METRIC_SERVER_FOUND" == "NO_METRIC_SERVER" ]; then
       echo -e "\e[35mA installing metrics server on cluster $cluster...\e[0m"
-      METRIC_SERVER_VERSION=v0.3.6
-      DOWNLOAD_URL=https://api.github.com/repos/kubernetes-sigs/metrics-server/tarball/${METRIC_SERVER_VERSION}
-      curl -Ls $DOWNLOAD_URL -o metrics-server-$METRIC_SERVER_VERSION.tar.gz
-      mkdir -p metrics-server-$METRIC_SERVER_VERSION
-      tar -xzf metrics-server-$METRIC_SERVER_VERSION.tar.gz --directory metrics-server-$METRIC_SERVER_VERSION --strip-components 1
-      kubectl apply -f metrics-server-$METRIC_SERVER_VERSION/deploy/1.8+/
-      kubectl -nkube-system get deploy metrics-server
+      kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
     else
       echo -e "\e[35mA metrics server is already deployed in kube-system namespace\e[0m"
     fi
